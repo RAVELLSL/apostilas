@@ -28,9 +28,9 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 30px; /* Aumentado para maior espaçamento entre os cards */
-            width: calc(100% - 60px); /* Ajuste conforme margem aumentada */
-            max-width: 300px; /* Largura máxima para garantir a legibilidade */
+            margin: 30px;
+            width: calc(100% - 60px);
+            max-width: 300px;
             padding: 20px;
             text-align: center;
             transition: transform 0.3s ease;
@@ -48,9 +48,10 @@
         }
         .tematica img {
             width: 100%;
-            height: auto;
+            height: 200px; /* Definida altura fixa */
+            object-fit: cover; /* Garantir que a imagem cubra o espaço sem distorções */
             border-radius: 8px;
-            margin-bottom: 10px; /* Espaçamento entre imagem e botão */
+            margin-bottom: 10px;
         }
         .ficha {
             border-top: 1px solid #ccc;
@@ -71,11 +72,10 @@
             background: linear-gradient(to bottom, #333 0%, #666 100%);
         }
 
-        /* Media Query para dispositivos com largura máxima de 600px (como smartphones) */
         @media only screen and (max-width: 600px) {
             .aula {
-                width: calc(100% - 30px); /* 100% menos o dobro da margem */
-                max-width: none; /* Remover a largura máxima para ocupar a largura total */
+                width: calc(100% - 30px);
+                max-width: none;
             }
         }
     </style>
@@ -87,15 +87,23 @@
     <main>
         <div class="aula">
             <div class="tematica">
-                <h2>Sistema de Informação e Noções Gerais de Informática Básica</h2>
-                <img src="https://www.cursosabeline.com.br/webroot/cur_cache/curso-com-certificado-de-informatica-basica-1567603559-870-810b01c8.jpg" alt="informática básica">
+                <h2>Computador</h2>
+                <img src="https://www.designi.com.br/images/preview/10432213.jpg" alt="computador">
                 <div class="ficha">
-                    <p><a href="https://ravellsl.github.io/apostilas-No-esGeraisInform-ticaB-sica/" target="_blank">Acessar</a></p>
+                    <p><a href="https://ravellsl.github.io/apostilas/" target="_blank">Acessar</a></p>
                 </div>
             </div>
         </div> 
         
-        <!-- Adicione mais aulas conforme necessário -->
+        <div class="aula">
+            <div class="tematica">
+                <h2>Dispositivos Móveis</h2>
+                <img src="https://img.odcdn.com.br/wp-content/uploads/2023/02/Pessoa-com-celular.jpg" alt="dispositivos móveis">
+                <div class="ficha">
+                    <p><a href="..." target="_blank">Acessar "em breve"</a></p>
+                </div>
+            </div>
+        </div> 
     </main>
 </body>
 </html>
