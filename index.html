@@ -1,97 +1,186 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Material didático sobre computadores e dispositivos móveis.">
+    <meta name="keywords" content="computador, dispositivos móveis, material didático, educação">
     <title>Material Didático</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #3fb7cf; /* Azul claro */
+            --secondary-color: #f5f5f5; /* Cinza muito claro */
+            --accent-color: #ff79c6; /* Rosa claro */
+            --background-gradient: linear-gradient(135deg, #ffffff 0%, #e0f7fa 100%); /* Degradê branco para azul-claro */
+            --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            --text-color: #333333; /* Cinza escuro */
+            --neon-border: 2px solid var(--primary-color);
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto Mono', monospace;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #ADD8E6, #FFFFFF, #ADD8E6);
-            color: #333;
+            background: var(--background-gradient);
+            color: var(--text-color);
+            line-height: 1.6;
         }
+
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 60px 20px;
             text-align: center;
+            box-shadow: var(--card-shadow);
+            border-bottom: var(--neon-border);
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: var(--secondary-color);
+            opacity: 0.9;
+        }
+
         main {
-            padding: 20px;
+            padding: 40px 20px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 30px;
         }
+
         .aula {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 30px;
-            width: calc(100% - 60px);
-            max-width: 300px;
-            padding: 20px;
+            background-color: var(--secondary-color);
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            width: 100%;
+            max-width: 350px;
+            padding: 25px;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: var(--neon-border);
         }
+
         .aula:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: var(--hover-shadow);
         }
-        .tematica {
-            margin-bottom: 20px;
-        }
+
         .tematica h2 {
-            color: #000;
-            margin-bottom: 10px;
-            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
         }
+
         .tematica img {
             width: 100%;
-            height: 200px; /* Definida altura fixa */
-            object-fit: cover; /* Garantir que a imagem cubra o espaço sem distorções */
+            height: 200px;
+            object-fit: cover;
             border-radius: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+            border: var(--neon-border);
         }
+
+        .tematica img:hover {
+            transform: scale(1.05);
+        }
+
         .ficha {
-            border-top: 1px solid #ccc;
-            padding-top: 10px;
-            margin-top: 10px;
+            border-top: 1px solid var(--primary-color);
+            padding-top: 15px;
+            margin-top: 15px;
             text-align: center;
         }
+
         .ficha a {
             text-decoration: none;
-            color: #fff;
-            display: inline-block;
-            padding: 8px 16px;
-            background: linear-gradient(to bottom, #444 0%, #888 100%);
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
+            color: var(--secondary-color);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--primary-color);
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-weight: 500;
         }
+
         .ficha a:hover {
-            background: linear-gradient(to bottom, #333 0%, #666 100%);
+            background: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            margin-top: 40px;
+            font-size: 0.9rem;
+            border-top: var(--neon-border);
+            box-shadow: var(--card-shadow);
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         @media only screen and (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
             .aula {
-                width: calc(100% - 30px);
+                width: calc(100% - 40px);
                 max-width: none;
+            }
+
+            .tematica h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Material Didático</h1>
+        <h1>Material Didático</h1>        
     </header>
     <main>
         <div class="aula">
             <div class="tematica">
                 <h2>Computador</h2>
-                <img src="https://www.designi.com.br/images/preview/10432213.jpg" alt="computador">
+                <img src="https://www.designi.com.br/images/preview/10432213.jpg" alt="Ilustração de um computador">
                 <div class="ficha">
-                    <p><a href="https://ravellsl.github.io/apostilas-computador/" target="_blank">Acessar</a></p>
+                    <p><a href="https://ravellsl.github.io/apostilas-computador/" target="_blank" aria-label="Acessar material sobre computador">
+                        <i class="fas fa-laptop"></i> Acessar
+                    </a></p>
                 </div>
             </div>
         </div> 
@@ -99,12 +188,17 @@
         <div class="aula">
             <div class="tematica">
                 <h2>Dispositivos Móveis</h2>
-                <img src="https://img.odcdn.com.br/wp-content/uploads/2023/02/Pessoa-com-celular.jpg" alt="dispositivos móveis">
+                <img src="https://img.odcdn.com.br/wp-content/uploads/2023/02/Pessoa-com-celular.jpg" alt="Ilustração de dispositivos móveis">
                 <div class="ficha">
-                    <p><a href="https://ravellsl.github.io/apostilas-material-didatico-audio/" target="_blank">Acessar</a></p>
+                    <p><a href="https://ravellsl.github.io/apostilas-material-didatico-audio/" target="_blank" aria-label="Acessar material sobre dispositivos móveis">
+                        <i class="fas fa-mobile-alt"></i> Acessar
+                    </a></p>
                 </div>
             </div>
         </div> 
     </main>
+    <footer>
+        <p> 2024-2025</p>
+    </footer>
 </body>
 </html>
